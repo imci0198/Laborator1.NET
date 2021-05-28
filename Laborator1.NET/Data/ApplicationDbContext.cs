@@ -12,6 +12,7 @@ namespace Laborator1.NET.Data
 {
     public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
     {
+        public DbSet<Pharmacists> Pharmacists { get; set; }
         public ApplicationDbContext(
             DbContextOptions options,
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
